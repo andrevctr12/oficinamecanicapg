@@ -1,22 +1,47 @@
 package br.com.unioeste.oficinamecanicapg.core.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Collection;
 
 @Entity
 public class Cliente {
-    private int idCliente;
-    private String nome;
-    private String cpf;
-    private String complemento;
-    private int numeroEndereco;
-    private Telefone telefone;
-    private Endereco endereco;
-    private Collection<EmailCliente> emailCliente;
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idCliente")
+    private int idCliente;
+
+    @Basic
+    @NotNull
+    @Column(name = "nome")
+    private String nome;
+
+    @Basic
+    @NotNull
+    @Column(name = "CPF")
+    private String cpf;
+
+    @Basic
+    @Column(name = "complemento")
+    private String complemento;
+
+    @Basic
+    @NotNull
+    @Column(name = "numeroEndereco")
+    private int numeroEndereco;
+
+    @ManyToOne
+    @JoinColumn(name = "idTelefone", referencedColumnName = "idTelefone", nullable = false)
+    private Telefone telefone;
+
+    @ManyToOne
+    @JoinColumn(name = "idEndereco", referencedColumnName = "idEndereco", nullable = false)
+    private Endereco endereco;
+
+    @OneToMany(mappedBy = "cliente")
+    private Collection<EmailCliente> emailCliente;
+
+
     public int getIdCliente() {
         return idCliente;
     }
@@ -25,8 +50,6 @@ public class Cliente {
         this.idCliente = idCliente;
     }
 
-    @Basic
-    @Column(name = "nome")
     public String getNome() {
         return nome;
     }
@@ -35,8 +58,6 @@ public class Cliente {
         this.nome = nome;
     }
 
-    @Basic
-    @Column(name = "CPF")
     public String getCpf() {
         return cpf;
     }
@@ -45,8 +66,6 @@ public class Cliente {
         this.cpf = cpf;
     }
 
-    @Basic
-    @Column(name = "complemento")
     public String getComplemento() {
         return complemento;
     }
@@ -55,8 +74,6 @@ public class Cliente {
         this.complemento = complemento;
     }
 
-    @Basic
-    @Column(name = "numeroEndereco")
     public int getNumeroEndereco() {
         return numeroEndereco;
     }
@@ -91,8 +108,6 @@ public class Cliente {
         return result;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "idTelefone", referencedColumnName = "idTelefone", nullable = false)
     public Telefone getTelefone() {
         return telefone;
     }
@@ -101,8 +116,6 @@ public class Cliente {
         this.telefone = telefone;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "idEndereco", referencedColumnName = "idEndereco", nullable = false)
     public Endereco getEndereco() {
         return endereco;
     }
@@ -111,7 +124,6 @@ public class Cliente {
         this.endereco = endereco;
     }
 
-    @OneToMany(mappedBy = "cliente")
     public Collection<EmailCliente> getEmailCliente() {
         return emailCliente;
     }

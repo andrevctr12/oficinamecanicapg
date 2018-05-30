@@ -1,6 +1,7 @@
 package br.com.unioeste.oficinamecanicapg.core.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "tipo_logradouro", schema = "oficinamecanicapg", catalog = "")
@@ -20,6 +21,7 @@ public class TipoLogradouro {
     }
 
     @Basic
+    @NotNull
     @Column(name = "nomeTipo")
     public String getNomeTipo() {
         return nomeTipo;

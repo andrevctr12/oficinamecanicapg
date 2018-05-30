@@ -1,15 +1,21 @@
 package br.com.unioeste.oficinamecanicapg.core.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Bairro {
-    private int idBairro;
-    private String nomeBairro;
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idBairro")
+    private int idBairro;
+
+    @Basic
+    @Column(name = "nomeBairro")
+    @NotNull
+    private String nomeBairro;
+
+
     public int getIdBairro() {
         return idBairro;
     }
@@ -18,8 +24,6 @@ public class Bairro {
         this.idBairro = idBairro;
     }
 
-    @Basic
-    @Column(name = "nomeBairro")
     public String getNomeBairro() {
         return nomeBairro;
     }

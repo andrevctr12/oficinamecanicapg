@@ -4,11 +4,11 @@ import javax.persistence.*;
 
 @Entity
 public class Ddd {
-    private int idDdd;
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idDDD")
+    private int idDdd;
+
     public int getIdDdd() {
         return idDdd;
     }

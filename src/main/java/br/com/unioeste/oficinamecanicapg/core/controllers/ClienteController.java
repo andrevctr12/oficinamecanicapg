@@ -33,7 +33,7 @@ public class ClienteController {
     }
 
     @RequestMapping(value = "/{id}", method = GET)
-    public Cliente findOne(@PathVariable Long id) {
+    public Cliente findOne(@PathVariable int id) {
         Cliente clienteResponse = repository.findOne(id);
         if (clienteResponse == null) {
             throw new ControllerException(NOT_FOUND, "Cliente não encontrado");
@@ -41,7 +41,7 @@ public class ClienteController {
         return clienteResponse;
     }
 
-    @RequestMapping(value = "/devices", method = GET)
+    @RequestMapping(method = GET)
     public List<Cliente> findAll() {
         return repository.findAll();
     }

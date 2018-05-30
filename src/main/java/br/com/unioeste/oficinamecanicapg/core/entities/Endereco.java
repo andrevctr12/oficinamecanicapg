@@ -1,6 +1,7 @@
 package br.com.unioeste.oficinamecanicapg.core.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Endereco {
@@ -22,6 +23,7 @@ public class Endereco {
     }
 
     @Basic
+    @NotNull
     @Column(name = "CEP")
     public int getCep() {
         return cep;

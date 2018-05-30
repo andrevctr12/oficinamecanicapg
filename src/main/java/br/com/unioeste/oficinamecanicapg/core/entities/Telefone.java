@@ -1,6 +1,7 @@
 package br.com.unioeste.oficinamecanicapg.core.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Telefone {
@@ -20,6 +21,7 @@ public class Telefone {
     }
 
     @Basic
+    @NotNull
     @Column(name = "telefone")
     public String getTelefone() {
         return telefone;

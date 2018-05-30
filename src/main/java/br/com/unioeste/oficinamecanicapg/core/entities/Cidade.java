@@ -1,19 +1,33 @@
 package br.com.unioeste.oficinamecanicapg.core.entities;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Collection;
 
 @Entity
 public class Cidade {
-    private int idCidade;
-    private String nomeCidade;
-    private String siglaCidade;
-    private Uf uf;
-    private Collection<Endereco> enderecos;
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idCidade")
+    private int idCidade;
+
+    @Basic
+    @Column(name = "nomeCidade")
+    @NotNull
+    private String nomeCidade;
+
+    @Basic
+    @Column(name = "siglaCidade")
+    private String siglaCidade;
+
+    @ManyToOne
+    @JoinColumn(name = "siglaUF", referencedColumnName = "siglaUF", nullable = false)
+    private Uf uf;
+
+    @OneToMany(mappedBy = "cidade")
+    private Collection<Endereco> enderecos;
+
+
     public int getIdCidade() {
         return idCidade;
     }
@@ -22,8 +36,6 @@ public class Cidade {
         this.idCidade = idCidade;
     }
 
-    @Basic
-    @Column(name = "nomeCidade")
     public String getNomeCidade() {
         return nomeCidade;
     }
@@ -32,8 +44,6 @@ public class Cidade {
         this.nomeCidade = nomeCidade;
     }
 
-    @Basic
-    @Column(name = "siglaCidade")
     public String getSiglaCidade() {
         return siglaCidade;
     }
@@ -64,8 +74,7 @@ public class Cidade {
         return result;
     }
 
-    @ManyToOne
-    @JoinColumn(name = "siglaUF", referencedColumnName = "siglaUF", nullable = false)
+
     public Uf getUf() {
         return uf;
     }
@@ -74,7 +83,6 @@ public class Cidade {
         this.uf = uf;
     }
 
-    @OneToMany(mappedBy = "cidade")
     public Collection<Endereco> getEnderecos() {
         return enderecos;
     }
