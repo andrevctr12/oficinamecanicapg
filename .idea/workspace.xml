@@ -2,32 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e278ca58-220d-45c6-92d2-4d66d2e33f3d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mariadb_jdbc_mariadb_java_client_2_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/controllers/ClienteController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/repositories/BairroRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/repositories/ClienteRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/errors/controllers/ControllerException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/errors/controllers/ErrorController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/errors/services/ServiceException.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_9_4_1212_jre7.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/oficinamecanicapg.iml" afterPath="$PROJECT_DIR$/oficinamecanicapg.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/Application.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Bairro.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Bairro.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Cidade.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Cidade.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Cliente.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Cliente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Ddd.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Ddd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/EmailCliente.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/EmailCliente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/EmailClientePK.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/EmailClientePK.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Endereco.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Endereco.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Logradouro.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Logradouro.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Telefone.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Telefone.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/TipoLogradouro.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/TipoLogradouro.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Uf.java" afterPath="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Uf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -93,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClienteController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClienteController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/controllers/ClienteController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
@@ -102,6 +77,21 @@
                 <element signature="imports" expanded="true" />
                 <element signature="e#1715#1716#0" expanded="true" />
                 <element signature="e#1758#1759#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+              <folding>
+                <element signature="e#491#492#0" expanded="true" />
+                <element signature="e#550#551#0" expanded="true" />
+                <element signature="e#617#618#0" expanded="true" />
+                <element signature="e#643#644#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -159,16 +149,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ddd.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Ddd.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -195,7 +175,6 @@
         <option value="$PROJECT_DIR$/oficinamecanicapg.iml" />
         <option value="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/Application.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/entities/Uf.java" />
@@ -212,6 +191,7 @@
         <option value="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/repositories/ClienteRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/errors/services/ServiceException.java" />
         <option value="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/core/controllers/ClienteController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/Application.java" />
       </list>
     </option>
   </component>
@@ -476,12 +456,12 @@
       <option name="presentableId" value="Default" />
       <updated>1527671872904</updated>
       <workItem from="1527671874532" duration="3770000" />
-      <workItem from="1527705209746" duration="10157000" />
+      <workItem from="1527705209746" duration="10945000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13927000" />
+    <option name="totallyTimeSpent" value="14715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="807" extended-state="6" />
@@ -661,17 +641,17 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1527717971535" expanded="true" signature="56872:56889" ph="..." />
-            <marker date="1527717971535" expanded="true" signature="56872:56907" ph="..." />
-            <marker date="1527717971535" expanded="true" signature="56872:56920" ph="..." />
-            <marker date="1527717971535" expanded="true" signature="56872:56935" ph="..." />
-            <marker date="1527717971535" expanded="true" signature="56970:57353" ph="..." />
-            <marker date="1527717971535" expanded="true" signature="56983:57338" ph="..." />
-            <marker date="1527717971535" expanded="true" signature="57018:57324" ph="..." />
-            <marker date="1527717971535" expanded="true" signature="57037:57309" ph="..." />
-            <marker date="1527717971535" expanded="true" signature="57111:57289" ph="..." />
-            <marker date="1527717971535" expanded="true" signature="57151:57255" ph="..." />
-            <marker date="1527717971535" expanded="true" signature="57172:57233" ph="..." />
+            <marker date="1527718888133" expanded="true" signature="52617:52634" ph="..." />
+            <marker date="1527718888133" expanded="true" signature="52617:52652" ph="..." />
+            <marker date="1527718888133" expanded="true" signature="52617:52665" ph="..." />
+            <marker date="1527718888133" expanded="true" signature="52617:52680" ph="..." />
+            <marker date="1527718888133" expanded="true" signature="52715:53098" ph="..." />
+            <marker date="1527718888133" expanded="true" signature="52728:53083" ph="..." />
+            <marker date="1527718888133" expanded="true" signature="52763:53069" ph="..." />
+            <marker date="1527718888133" expanded="true" signature="52782:53054" ph="..." />
+            <marker date="1527718888133" expanded="true" signature="52856:53034" ph="..." />
+            <marker date="1527718888133" expanded="true" signature="52896:53000" ph="..." />
+            <marker date="1527718888133" expanded="true" signature="52917:52978" ph="..." />
           </folding>
         </state>
       </provider>
@@ -689,16 +669,6 @@
         <state relative-caret-position="161">
           <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="27" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <marker date="1527713173034" expanded="true" signature="439:1122" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -874,6 +844,19 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1715#1716#0" expanded="true" />
             <element signature="e#1758#1759#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/unioeste/oficinamecanicapg/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding>
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
           </folding>
         </state>
       </provider>
