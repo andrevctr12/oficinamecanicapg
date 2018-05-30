@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="oficinamecanicapg@localhost" uuid="6d235d6f-aece-4cce-8998-d4639897f998">
+      <database-info product="MySQL" version="5.5.5-10.3.7-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-schemas>*:@,oficinamecanicapg</introspection-schemas>
+    </data-source>
+    <data-source name="oficinamecanicapg@localhost [PG]" uuid="962715cc-f840-4d4d-9b47-b8613a7324a3">
+      <database-info product="PostgreSQL" version="10.4" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>andrevctr12</user-name>
+      <introspection-schemas>oficinamecanicapg:oficinamecanicapg</introspection-schemas>
+    </data-source>
+  </component>
+</project>

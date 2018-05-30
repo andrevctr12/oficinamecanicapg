@@ -1,17 +1,18 @@
 package br.com.unioeste.oficinamecanicapg.core.entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 public class Cidade {
     private int idCidade;
     private String nomeCidade;
     private String siglaCidade;
+    private Uf uf;
+    private Collection<Endereco> enderecos;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idCidade")
     public int getIdCidade() {
         return idCidade;
@@ -61,5 +62,24 @@ public class Cidade {
         result = 31 * result + (nomeCidade != null ? nomeCidade.hashCode() : 0);
         result = 31 * result + (siglaCidade != null ? siglaCidade.hashCode() : 0);
         return result;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "siglaUF", referencedColumnName = "siglaUF", nullable = false)
+    public Uf getUf() {
+        return uf;
+    }
+
+    public void setUf(Uf uf) {
+        this.uf = uf;
+    }
+
+    @OneToMany(mappedBy = "cidade")
+    public Collection<Endereco> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(Collection<Endereco> enderecos) {
+        this.enderecos = enderecos;
     }
 }

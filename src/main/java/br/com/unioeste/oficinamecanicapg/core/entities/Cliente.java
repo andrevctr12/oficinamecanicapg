@@ -1,9 +1,7 @@
 package br.com.unioeste.oficinamecanicapg.core.entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Collection;
 
 @Entity
 public class Cliente {
@@ -12,8 +10,12 @@ public class Cliente {
     private String cpf;
     private String complemento;
     private int numeroEndereco;
+    private Telefone telefone;
+    private Endereco endereco;
+    private Collection<EmailCliente> emailCliente;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idCliente")
     public int getIdCliente() {
         return idCliente;
@@ -87,5 +89,34 @@ public class Cliente {
         result = 31 * result + (complemento != null ? complemento.hashCode() : 0);
         result = 31 * result + numeroEndereco;
         return result;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "idTelefone", referencedColumnName = "idTelefone", nullable = false)
+    public Telefone getTelefone() {
+        return telefone;
+    }
+
+    public void setTelefone(Telefone telefone) {
+        this.telefone = telefone;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "idEndereco", referencedColumnName = "idEndereco", nullable = false)
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    @OneToMany(mappedBy = "cliente")
+    public Collection<EmailCliente> getEmailCliente() {
+        return emailCliente;
+    }
+
+    public void setEmailCliente(Collection<EmailCliente> emailCliente) {
+        this.emailCliente = emailCliente;
     }
 }

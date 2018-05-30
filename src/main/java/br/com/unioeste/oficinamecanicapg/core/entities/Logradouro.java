@@ -1,16 +1,15 @@
 package br.com.unioeste.oficinamecanicapg.core.entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Logradouro {
     private int idLogradouro;
     private String logradouro;
+    private TipoLogradouro tipoLogradouro;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idLogradouro")
     public int getIdLogradouro() {
         return idLogradouro;
@@ -48,5 +47,15 @@ public class Logradouro {
         int result = idLogradouro;
         result = 31 * result + (logradouro != null ? logradouro.hashCode() : 0);
         return result;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "idTipoLogradouro", referencedColumnName = "idTipoLogradouro", nullable = false)
+    public TipoLogradouro getTipoLogradouro() {
+        return tipoLogradouro;
+    }
+
+    public void setTipoLogradouro(TipoLogradouro tipoLogradouro) {
+        this.tipoLogradouro = tipoLogradouro;
     }
 }

@@ -9,6 +9,7 @@ public class TipoLogradouro {
     private String nomeTipo;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idTipoLogradouro")
     public int getIdTipoLogradouro() {
         return idTipoLogradouro;

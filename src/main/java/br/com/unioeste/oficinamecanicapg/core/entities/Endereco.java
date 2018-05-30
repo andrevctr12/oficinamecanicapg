@@ -1,16 +1,17 @@
 package br.com.unioeste.oficinamecanicapg.core.entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Endereco {
     private int idEndereco;
     private int cep;
+    private Bairro bairro;
+    private Cidade cidade;
+    private Logradouro logradouro;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idEndereco")
     public int getIdEndereco() {
         return idEndereco;
@@ -48,5 +49,35 @@ public class Endereco {
         int result = idEndereco;
         result = 31 * result + cep;
         return result;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "idBairro", referencedColumnName = "idBairro", nullable = false)
+    public Bairro getBairro() {
+        return bairro;
+    }
+
+    public void setBairro(Bairro bairro) {
+        this.bairro = bairro;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "idCidade", referencedColumnName = "idCidade", nullable = false)
+    public Cidade getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "idLogradouro", referencedColumnName = "idLogradouro", nullable = false)
+    public Logradouro getLogradouro() {
+        return logradouro;
+    }
+
+    public void setLogradouro(Logradouro logradouro) {
+        this.logradouro = logradouro;
     }
 }

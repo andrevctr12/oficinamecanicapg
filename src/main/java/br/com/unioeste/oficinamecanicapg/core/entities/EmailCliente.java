@@ -6,19 +6,20 @@ import javax.persistence.*;
 @Table(name = "email_cliente", schema = "oficinamecanicapg", catalog = "")
 @IdClass(EmailClientePK.class)
 public class EmailCliente {
-    private int idemailCliente;
+    private int idEmailCliente;
     private String emailCliente;
     private int idCliente;
-    private Cliente clienteByIdCliente;
+    private Cliente cliente;
 
     @Id
-    @Column(name = "idemailCliente")
-    public int getIdemailCliente() {
-        return idemailCliente;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "idEmailCliente")
+    public int getIdEmailCliente() {
+        return idEmailCliente;
     }
 
-    public void setIdemailCliente(int idemailCliente) {
-        this.idemailCliente = idemailCliente;
+    public void setIdEmailCliente(int idemailCliente) {
+        this.idEmailCliente = idemailCliente;
     }
 
     @Basic
@@ -48,7 +49,7 @@ public class EmailCliente {
 
         EmailCliente that = (EmailCliente) o;
 
-        if (idemailCliente != that.idemailCliente) return false;
+        if (idEmailCliente != that.idEmailCliente) return false;
         if (idCliente != that.idCliente) return false;
         if (emailCliente != null ? !emailCliente.equals(that.emailCliente) : that.emailCliente != null) return false;
 
@@ -57,19 +58,19 @@ public class EmailCliente {
 
     @Override
     public int hashCode() {
-        int result = idemailCliente;
+        int result = idEmailCliente;
         result = 31 * result + (emailCliente != null ? emailCliente.hashCode() : 0);
         result = 31 * result + idCliente;
         return result;
     }
 
     @ManyToOne
-    @JoinColumn(name = "idCliente", referencedColumnName = "idCliente", nullable = false)
-    public Cliente getClienteByIdCliente() {
-        return clienteByIdCliente;
+    @JoinColumn(name = "idCliente", referencedColumnName = "idCliente", insertable = false, updatable = false)
+    public Cliente getCliente() {
+        return cliente;
     }
 
-    public void setClienteByIdCliente(Cliente clienteByIdCliente) {
-        this.clienteByIdCliente = clienteByIdCliente;
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 }

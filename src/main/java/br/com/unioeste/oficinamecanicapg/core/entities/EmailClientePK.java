@@ -5,17 +5,17 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 public class EmailClientePK implements Serializable {
-    private int idemailCliente;
+    private int idEmailCliente;
     private int idCliente;
 
-    @Column(name = "idemailCliente")
+    @Column(name = "idEmailCliente")
     @Id
-    public int getIdemailCliente() {
-        return idemailCliente;
+    public int getIdEmailCliente() {
+        return idEmailCliente;
     }
 
-    public void setIdemailCliente(int idemailCliente) {
-        this.idemailCliente = idemailCliente;
+    public void setIdEmailCliente(int idemailCliente) {
+        this.idEmailCliente = idemailCliente;
     }
 
     @Column(name = "idCliente")
@@ -35,7 +35,7 @@ public class EmailClientePK implements Serializable {
 
         EmailClientePK that = (EmailClientePK) o;
 
-        if (idemailCliente != that.idemailCliente) return false;
+        if (idEmailCliente != that.idEmailCliente) return false;
         if (idCliente != that.idCliente) return false;
 
         return true;
@@ -43,7 +43,7 @@ public class EmailClientePK implements Serializable {
 
     @Override
     public int hashCode() {
-        int result = idemailCliente;
+        int result = idEmailCliente;
         result = 31 * result + idCliente;
         return result;
     }

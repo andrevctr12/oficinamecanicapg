@@ -1,9 +1,6 @@
 package br.com.unioeste.oficinamecanicapg.core.entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Bairro {
@@ -11,6 +8,7 @@ public class Bairro {
     private String nomeBairro;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idBairro")
     public int getIdBairro() {
         return idBairro;

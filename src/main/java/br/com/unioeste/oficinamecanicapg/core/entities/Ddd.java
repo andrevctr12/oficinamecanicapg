@@ -1,14 +1,13 @@
 package br.com.unioeste.oficinamecanicapg.core.entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Ddd {
     private int idDdd;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idDDD")
     public int getIdDdd() {
         return idDdd;

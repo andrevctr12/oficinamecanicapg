@@ -1,16 +1,15 @@
 package br.com.unioeste.oficinamecanicapg.core.entities;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Telefone {
     private int idTelefone;
     private String telefone;
+    private Ddd ddd;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "idTelefone")
     public int getIdTelefone() {
         return idTelefone;
@@ -48,5 +47,15 @@ public class Telefone {
         int result = idTelefone;
         result = 31 * result + (telefone != null ? telefone.hashCode() : 0);
         return result;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "idDDD", referencedColumnName = "idDDD", nullable = false)
+    public Ddd getDdd() {
+        return ddd;
+    }
+
+    public void setDdd(Ddd ddd) {
+        this.ddd = ddd;
     }
 }
