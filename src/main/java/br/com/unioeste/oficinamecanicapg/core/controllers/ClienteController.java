@@ -6,9 +6,7 @@ import br.com.unioeste.oficinamecanicapg.errors.controllers.ControllerException;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
@@ -22,7 +20,7 @@ public class ClienteController {
     private ClienteRepository repository;
 
 
-    @RequestMapping(method = POST)
+    @PostMapping()
     public Cliente create(@RequestBody Cliente cliente) {
         try {
             return repository.save(cliente);
@@ -32,7 +30,8 @@ public class ClienteController {
         }
     }
 
-    @RequestMapping(value = "/{id}", method = GET)
+    @RequestMapping("/{id}")
+    @GetMapping(produces = "application/json")
     public Cliente findOne(@PathVariable int id) {
         Cliente clienteResponse = repository.findOne(id);
         if (clienteResponse == null) {
@@ -41,7 +40,7 @@ public class ClienteController {
         return clienteResponse;
     }
 
-    @RequestMapping(method = GET)
+    @GetMapping(produces = "application/json")
     public List<Cliente> findAll() {
         return repository.findAll();
     }
