@@ -13,7 +13,7 @@ public class Endereco {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idEndereco")
+    @Column(name = "id_endereco")
     public int getIdEndereco() {
         return idEndereco;
     }

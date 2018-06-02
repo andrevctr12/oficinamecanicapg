@@ -31,9 +31,11 @@ public class Cliente {
     private int numeroEndereco;
 
     @ManyToOne
+    //@JoinColumn(name = "idTelefone", referencedColumnName = "idTelefone", nullable = false)
     private Telefone telefone;
 
     @ManyToOne
+    @JoinColumn(name = "id_endereco", referencedColumnName = "id_endereco", nullable = false)
     private Endereco endereco;
 
     @OneToMany(mappedBy = "cliente")
