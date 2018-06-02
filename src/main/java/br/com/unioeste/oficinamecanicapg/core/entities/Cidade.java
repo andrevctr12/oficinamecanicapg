@@ -79,12 +79,4 @@ public class Cidade {
     public void setUf(Uf uf) {
         this.uf = uf;
     }
-
-    public Collection<Endereco> getEnderecos() {
-        return enderecos;
-    }
-
-    public void setEnderecos(Collection<Endereco> enderecos) {
-        this.enderecos = enderecos;
-    }
 }
