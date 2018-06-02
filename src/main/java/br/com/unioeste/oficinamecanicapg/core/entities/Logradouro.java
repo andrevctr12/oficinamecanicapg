@@ -52,7 +52,7 @@ public class Logradouro {
     }
 
     @ManyToOne
-    @JoinColumn(name = "idTipoLogradouro", referencedColumnName = "idTipoLogradouro", nullable = false)
+
     public TipoLogradouro getTipoLogradouro() {
         return tipoLogradouro;
     }

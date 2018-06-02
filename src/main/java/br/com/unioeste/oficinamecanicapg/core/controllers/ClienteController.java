@@ -39,7 +39,11 @@ public class ClienteController {
 
     @GetMapping(produces = "application/json")
     public @ResponseBody List<Cliente> findAll() {
-        return repository.findAll();
+        List<Cliente> clientes = repository.findAll();
+        if (clientes == null) {
+            throw new ControllerException(NOT_FOUND, "Não existe nenhum cliente");
+        }
+        return clientes;
     }
 
 }

@@ -52,7 +52,7 @@ public class Telefone {
     }
 
     @ManyToOne
-    @JoinColumn(name = "idDDD", referencedColumnName = "idDDD", nullable = false)
+
     public Ddd getDdd() {
         return ddd;
     }

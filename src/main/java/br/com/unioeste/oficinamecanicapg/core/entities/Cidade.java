@@ -21,7 +21,6 @@ public class Cidade {
     private String siglaCidade;
 
     @ManyToOne
-    @JoinColumn(name = "siglaUF", referencedColumnName = "siglaUF", nullable = false)
     private Uf uf;
 
     @OneToMany(mappedBy = "cidade")

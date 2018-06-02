@@ -54,7 +54,7 @@ public class Endereco {
     }
 
     @ManyToOne
-    @JoinColumn(name = "idBairro", referencedColumnName = "idBairro", nullable = false)
+
     public Bairro getBairro() {
         return bairro;
     }
@@ -64,7 +64,7 @@ public class Endereco {
     }
 
     @ManyToOne
-    @JoinColumn(name = "idCidade", referencedColumnName = "idCidade", nullable = false)
+
     public Cidade getCidade() {
         return cidade;
     }
@@ -74,7 +74,7 @@ public class Endereco {
     }
 
     @ManyToOne
-    @JoinColumn(name = "idLogradouro", referencedColumnName = "idLogradouro", nullable = false)
+
     public Logradouro getLogradouro() {
         return logradouro;
     }
