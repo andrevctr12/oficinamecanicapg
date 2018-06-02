@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import static org.springframework.http.HttpStatus.BAD_REQUEST;
 import static org.springframework.http.HttpStatus.NOT_FOUND;
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
-import static org.springframework.web.bind.annotation.RequestMethod.POST;
-
 @Controller
 @RequestMapping("/cliente")
 public class ClienteController {
@@ -21,7 +18,7 @@ public class ClienteController {
 
 
     @PostMapping()
-    public Cliente create(@RequestBody Cliente cliente) {
+    public @ResponseBody Cliente create(@RequestBody Cliente cliente) {
         try {
             return repository.save(cliente);
         }
@@ -32,7 +29,7 @@ public class ClienteController {
 
     @RequestMapping("/{id}")
     @GetMapping(produces = "application/json")
-    public Cliente findOne(@PathVariable int id) {
+    public @ResponseBody Cliente findOne(@PathVariable int id) {
         Cliente clienteResponse = repository.findOne(id);
         if (clienteResponse == null) {
             throw new ControllerException(NOT_FOUND, "Cliente não encontrado");
@@ -41,7 +38,7 @@ public class ClienteController {
     }
 
     @GetMapping(produces = "application/json")
-    public List<Cliente> findAll() {
+    public @ResponseBody List<Cliente> findAll() {
         return repository.findAll();
     }
 
