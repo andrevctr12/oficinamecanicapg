@@ -24,7 +24,7 @@ public class Endereco {
 
     @Basic
     @NotNull
-    @Column(name = "CEP")
+    @Column(name = "cep")
     public int getCep() {
         return cep;
     }
@@ -54,7 +54,7 @@ public class Endereco {
     }
 
     @ManyToOne
-
+    @JoinColumn(name = "id_bairro", referencedColumnName = "id_bairro", nullable = false)
     public Bairro getBairro() {
         return bairro;
     }
@@ -64,7 +64,7 @@ public class Endereco {
     }
 
     @ManyToOne
-
+    @JoinColumn(name = "id_cidade", referencedColumnName = "id_cidade", nullable = false)
     public Cidade getCidade() {
         return cidade;
     }
@@ -74,7 +74,7 @@ public class Endereco {
     }
 
     @ManyToOne
-
+    @JoinColumn(name = "id_logradouro", referencedColumnName = "id_logradouro", nullable = false)
     public Logradouro getLogradouro() {
         return logradouro;
     }

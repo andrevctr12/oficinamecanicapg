@@ -7,11 +7,11 @@ import javax.validation.constraints.NotNull;
 public class Bairro {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idBairro")
+    @Column(name = "id_bairro")
     private int idBairro;
 
     @Basic
-    @Column(name = "nomeBairro")
+    @Column(name = "nome_bairro")
     @NotNull
     private String nomeBairro;
 

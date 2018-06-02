@@ -8,24 +8,21 @@ import java.util.Collection;
 public class Cidade {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idCidade")
+    @Column(name = "id_cidade")
     private int idCidade;
 
     @Basic
-    @Column(name = "nomeCidade")
+    @Column(name = "nome_cidade")
     @NotNull
     private String nomeCidade;
 
     @Basic
-    @Column(name = "siglaCidade")
+    @Column(name = "sigla_cidade")
     private String siglaCidade;
 
     @ManyToOne
-    @JoinColumn(name = "siglaUF", referencedColumnName = "siglaUF", nullable = false)
+    @JoinColumn(name = "sigla_uf", referencedColumnName = "sigla_uf", nullable = false)
     private Uf uf;
-
-    @OneToMany(mappedBy = "cidade")
-    private Collection<Endereco> enderecos;
 
 
     public int getIdCidade() {

@@ -13,7 +13,7 @@ public class EmailCliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idEmailCliente")
+    @Column(name = "id_email_cliente")
     public int getIdEmailCliente() {
         return idEmailCliente;
     }
@@ -23,7 +23,7 @@ public class EmailCliente {
     }
 
     @Basic
-    @Column(name = "emailCliente")
+    @Column(name = "email_cliente")
     public String getEmailCliente() {
         return emailCliente;
     }
@@ -33,7 +33,7 @@ public class EmailCliente {
     }
 
     @Id
-    @Column(name = "idCliente")
+    @Column(name = "id_cliente")
     public int getIdCliente() {
         return idCliente;
     }
@@ -65,7 +65,7 @@ public class EmailCliente {
     }
 
     @ManyToOne
-    @JoinColumn(name = "idCliente", referencedColumnName = "idCliente", insertable = false, updatable = false)
+    @JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente", insertable = false, updatable = false)
     public Cliente getCliente() {
         return cliente;
     }

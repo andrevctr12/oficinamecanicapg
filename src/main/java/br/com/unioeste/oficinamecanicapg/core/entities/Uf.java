@@ -10,7 +10,7 @@ public class Uf {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "siglaUF")
+    @Column(name = "sigla_uf")
     public String getSiglaUf() {
         return siglaUf;
     }
@@ -21,7 +21,7 @@ public class Uf {
 
     @Basic
     @NotNull
-    @Column(name = "nomeUF")
+    @Column(name = "nome_uf")
     public String getNomeUf() {
         return nomeUf;
     }

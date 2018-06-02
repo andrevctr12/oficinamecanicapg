@@ -11,7 +11,7 @@ public class Telefone {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idTelefone")
+    @Column(name = "id_telefone")
     public int getIdTelefone() {
         return idTelefone;
     }
@@ -52,7 +52,7 @@ public class Telefone {
     }
 
     @ManyToOne
-
+    @JoinColumn(name = "id_ddd", referencedColumnName = "id_ddd", nullable = false)
     public Ddd getDdd() {
         return ddd;
     }

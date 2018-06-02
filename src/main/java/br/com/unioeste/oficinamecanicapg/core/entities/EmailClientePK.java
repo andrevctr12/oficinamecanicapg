@@ -8,7 +8,7 @@ public class EmailClientePK implements Serializable {
     private int idEmailCliente;
     private int idCliente;
 
-    @Column(name = "idEmailCliente")
+    @Column(name = "id_email_cliente")
     @Id
     public int getIdEmailCliente() {
         return idEmailCliente;
@@ -18,7 +18,7 @@ public class EmailClientePK implements Serializable {
         this.idEmailCliente = idemailCliente;
     }
 
-    @Column(name = "idCliente")
+    @Column(name = "id_cliente")
     @Id
     public int getIdCliente() {
         return idCliente;

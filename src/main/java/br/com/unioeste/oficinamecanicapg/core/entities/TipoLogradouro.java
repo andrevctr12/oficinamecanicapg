@@ -11,7 +11,7 @@ public class TipoLogradouro {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idTipoLogradouro")
+    @Column(name = "id_tipo_lougradouro")
     public int getIdTipoLogradouro() {
         return idTipoLogradouro;
     }
@@ -22,7 +22,7 @@ public class TipoLogradouro {
 
     @Basic
     @NotNull
-    @Column(name = "nomeTipo")
+    @Column(name = "nome_tipo")
     public String getNomeTipo() {
         return nomeTipo;
     }

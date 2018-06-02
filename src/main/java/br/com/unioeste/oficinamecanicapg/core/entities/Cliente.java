@@ -8,7 +8,7 @@ import java.util.Collection;
 public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idCliente")
+    @Column(name = "id_cliente")
     private int idCliente;
 
     @Basic
@@ -18,7 +18,7 @@ public class Cliente {
 
     @Basic
     @NotNull
-    @Column(name = "CPF")
+    @Column(name = "cpf")
     private String cpf;
 
     @Basic
@@ -27,11 +27,11 @@ public class Cliente {
 
     @Basic
     @NotNull
-    @Column(name = "numeroEndereco")
+    @Column(name = "numero_endereco")
     private int numeroEndereco;
 
     @ManyToOne
-    //@JoinColumn(name = "idTelefone", referencedColumnName = "idTelefone", nullable = false)
+    @JoinColumn(name = "id_telefone", referencedColumnName = "id_telefone", nullable = false)
     private Telefone telefone;
 
     @ManyToOne

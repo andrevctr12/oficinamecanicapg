@@ -11,7 +11,7 @@ public class Logradouro {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "idLogradouro")
+    @Column(name = "id_logradouro")
     public int getIdLogradouro() {
         return idLogradouro;
     }
@@ -52,7 +52,7 @@ public class Logradouro {
     }
 
     @ManyToOne
-
+    @JoinColumn(name = "id_tipo_lougradouro", referencedColumnName = "id_tipo_lougradouro", nullable = false)
     public TipoLogradouro getTipoLogradouro() {
         return tipoLogradouro;
     }
